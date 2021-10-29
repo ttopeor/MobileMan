@@ -4,6 +4,7 @@
  var test_length = 50;
  var ros = new ROSLIB.Ros({
      url : 'ws://192.168.10.124:9090'
+
    });
 
 var status_listener = new ROSLIB.Topic({

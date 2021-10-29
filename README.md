@@ -21,7 +21,18 @@ roslaunch rosbridge_server rosbridge_websocket.launch
 UI
 cd MobilemanUI/electron-quick-start && npm start 
 
+==============================for test===================================
+Server
+cd Desktop/MobilemanUI && ./rtsp-simple-server-mac
 
+Rotbot
+ffmpeg -f avfoundation -framerate 25 -video_size 640x480 -i "0:none" -vcodec libx264 -preset ultrafast -tune zerolatency -pix_fmt uyvy422 -f rtsp rtsp://localhost:8554/live 
 
+ROS(if needed)
+export ROS_MASTER_URI=http://mobileman-Atom:11311
+roslaunch rosbridge_server rosbridge_websocket.launch
+
+UI
+cd MobilemanUI/ui && npm start 
 
 
