@@ -16,8 +16,8 @@ const server = http.createServer(app_stream_converter);
 function createWindow () {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1920,
-    height: 1080,
+    width: 1792,
+    height: 768,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
