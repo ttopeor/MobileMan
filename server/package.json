@@ -1,0 +1,23 @@
+{
+  "name": "rtsp_to_ws",
+  "version": "1.0.0",
+  "description": "rtsp to ws",
+  "main": "rtsp_to_ws.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttopeor/MobilemanUI.git"
+  },
+  "author": "yue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ttopeor/MobilemanUI/issues"
+  },
+  "homepage": "https://github.com/ttopeor/MobilemanUI#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-rtsp-stream": "^0.0.9"
+  }
+}
