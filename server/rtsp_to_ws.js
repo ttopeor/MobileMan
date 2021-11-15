@@ -48,6 +48,10 @@ app.get('/app.js', function(req, res) {
 app.get('/app.css', function(req, res) {
   res.sendFile(path.join(__dirname, '../ui/app.css'));
 });
+app.get('/jsmpeg.min.js', function(req, res) {
+  res.sendFile(path.join(__dirname, '../ui/jsmpeg.min.js'));
+});
+
 app.get('/js/jquery-3.5.1.min.js', function(req, res) {
   res.sendFile(path.join(__dirname, '../ui/js/jquery-3.5.1.min.js'));
 });
