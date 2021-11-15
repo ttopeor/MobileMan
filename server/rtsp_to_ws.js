@@ -40,11 +40,37 @@ app_stream_converter.post("/connection", (req, res) => {
 
 // sendFile will go here
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '/index.html'));
-  res.sendFile(path.join(__dirname, '/app.js'));
-  res.sendFile(path.join(__dirname, '/app.css'));
-  res.sendFile(path.join(__dirname, '/js/jquery-3.5.1.min.js'));
-  res.sendFile(path.join(__dirname, '/js/roslib.js'));
+  res.sendFile(path.join(__dirname, '../ui/index.html'));
+});
+app.get('/app.js', function(req, res) {
+  res.sendFile(path.join(__dirname, '../ui/app.js'));
+});
+app.get('/app.css', function(req, res) {
+  res.sendFile(path.join(__dirname, '../ui/app.css'));
+});
+app.get('/js/jquery-3.5.1.min.js', function(req, res) {
+  res.sendFile(path.join(__dirname, '../js/jquery-3.5.1.min.js'));
+});
+app.get('/js/roslib.js', function(req, res) {
+  res.sendFile(path.join(__dirname, '../js/roslib.js'));
+});
+app.get('/img/camera.png', function(req, res) {
+  res.sendFile(path.join(__dirname, '../img/camera.png'));
+});
+app.get('/img/compass.png', function(req, res) {
+  res.sendFile(path.join(__dirname, '../img/compass.png'));
+});
+app.get('/img/map_selector.png', function(req, res) {
+  res.sendFile(path.join(__dirname, '../img/map_selector.png'));
+});
+app.get('/img/minus.png', function(req, res) {
+  res.sendFile(path.join(__dirname, '../img/minus.png'));
+});
+app.get('/img/plus.png', function(req, res) {
+  res.sendFile(path.join(__dirname, '../img/plus.png'));
+});
+app.get('/img/tool.png', function(req, res) {
+  res.sendFile(path.join(__dirname, '../img/tool.png'));
 });
 
 app.listen(port);
