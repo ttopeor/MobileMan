@@ -19,7 +19,7 @@ const server = http.createServer(app_stream_converter);
 const rtspServer = new Stream({
   name: "camera",
   //streamUrl: "rtsp://192.168.10.40:8554/live",
-  streamUrl: "rtsp://192.168.10.53:8554/live",
+  streamUrl: "rtsp://localhost:8554/live",
   wsPort: 9999,
   ffmpegOptions: {
     // options ffmpeg flags
