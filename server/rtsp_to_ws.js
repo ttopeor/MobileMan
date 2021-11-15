@@ -14,7 +14,8 @@ const Stream = require('node-rtsp-stream')
 
 const app_stream_converter = express();
 const server = http.createServer(app_stream_converter);
-
+const app = express();
+const port = process.env.PORT || 8080;
 
 const rtspServer = new Stream({
   name: "camera",
@@ -36,6 +37,14 @@ app_stream_converter.post("/connection", (req, res) => {
   res.json({ id: 1, state: "good" });
 });
 
+
+// sendFile will go here
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, '/index.html'));
+});
+
+app.listen(port);
+console.log('Server started at http://54.254.23.229:' + port);
 /**
  * Listen
  */
