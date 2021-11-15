@@ -17,7 +17,7 @@ var status_listener = new ROSLIB.Topic({
 status_listener.subscribe(statusMessageCallback);
 */
 
-player = new JSMpeg.Player("ws://54.254.23.229:9999", {
+player = new JSMpeg.Player("ws://localhost:9999", {
   canvas: document.getElementById("get_video") // Canvas should be a canvas DOM element
 });
 
