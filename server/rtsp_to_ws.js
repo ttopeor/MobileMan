@@ -41,6 +41,10 @@ app_stream_converter.post("/connection", (req, res) => {
 // sendFile will go here
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '/index.html'));
+  res.sendFile(path.join(__dirname, '/app.js'));
+  res.sendFile(path.join(__dirname, '/app.css'));
+  res.sendFile(path.join(__dirname, '/js/jquery-3.5.1.min.js'));
+  res.sendFile(path.join(__dirname, '/js/roslib.js'));
 });
 
 app.listen(port);
