@@ -20,7 +20,7 @@ const port = process.env.PORT || 8080;
 const rtspServer = new Stream({
   name: "camera",
   //streamUrl: "rtsp://192.168.10.40:8554/live",
-  streamUrl: "rtsp://54.254.23.229:8554/live",
+  streamUrl: "rtsp://localhost:8554/live",
   wsPort: 9999,
   ffmpegOptions: {
     // options ffmpeg flags
@@ -28,6 +28,10 @@ const rtspServer = new Stream({
     "-r": 30 // options with required values specify the value after the key
   }
 });
+
+rtspServer.on("exitWithError", () => {console.log("Exit with error")})
+
+
 /**
  * HTTP service
  */
