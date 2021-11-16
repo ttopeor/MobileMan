@@ -17,21 +17,29 @@ const server = http.createServer(app_stream_converter);
 const app = express();
 const port = process.env.PORT || 8080;
 
-const rtspServer = new Stream({
-  name: "camera",
-  //streamUrl: "rtsp://192.168.10.40:8554/live",
-  streamUrl: "rtsp://localhost:8554/live",
-  wsPort: 9999,
-  ffmpegOptions: {
-    // options ffmpeg flags
-    "-stats": "", // an option with no neccessary value uses a blank string
-    "-r": 30 // options with required values specify the value after the key
-  }
-});
 
-rtspServer.on("exitWithError", () => {console.log("Exit with error")})
-
-
+function start_server(){
+  console.log("start rtsp server");
+  const rtspServer = new Stream({
+    name: "camera",
+    //streamUrl: "rtsp://192.168.10.40:8554/live",
+    streamUrl: "rtsp://localhost:8554/live",
+    wsPort: 9999,
+    ffmpegOptions: {
+      // options ffmpeg flags
+      "-stats": "", // an option with no neccessary value uses a blank string
+      "-r": 30 // options with required values specify the value after the key
+    }
+  });
+  rtspServer.on("exitWithError", () => {
+    console.log("server exit");
+    setTimeout(() => {
+      console.log("reconnecting");
+      start_server();
+    }, 3000);
+  })
+}
+start_server();
 /**
  * HTTP service
  */
