@@ -21,10 +21,20 @@ player = new JSMpeg.Player("ws://54.254.23.229:9999", {
   canvas: document.getElementById("get_video") // Canvas should be a canvas DOM element
 });
 
+var socket = io();
+
+socket.on('location_update', (msg) => {
+  console.log('message: ' + msg);
+});
+
 
 
 homepage();
 
+function send_command(w,s,a,d){
+  socket.emit('command',{w,s,a,d});
+
+}
 
 function homepage(){
   setbodysize();

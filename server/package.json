@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ttopeor/MobilemanUI#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "node-rtsp-stream": "^0.0.9"
+    "node-rtsp-stream": "^0.0.9",
+    "socket.io": "^4.4.0"
   }
 }

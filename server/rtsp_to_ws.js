@@ -16,6 +16,22 @@ const app = express();
 const server = http.createServer(app);
 const port = process.env.PORT || 8080;
 
+const { Server } = require("socket.io");
+const io = new Server(server);
+
+io.on('connection', (socket) => {
+  console.log('a user connected');
+  socket.on('location_info', (rotation) => { 
+    console.log('location received:', rotation);
+    io.emit('location_update',rotation);
+  });
+  socket.on('command',({w,s,a,d}) =>{
+    io.emit('command_update',{w,s,a,d});
+  });
+});
+
+
+
 
 function start_server() {
   console.log("start rtsp server");
@@ -62,7 +78,7 @@ function start_server() {
 
 
 }
-start_server();
+//start_server();
 
 
 /**
