@@ -1,4 +1,5 @@
-# MobileMan, Robotics for Construction 4.0 Project WP3, Nanyang Technological University, RRC Sponsored by BCA, NRP. Directed by Prof I-Ming Chen.
+# MobileMan, Robotics for Construction 4.0 Project WP3, Nanyang Technological University, RRC 
+# Sponsored by BCA, NRP. 
 #### Test video: https://www.youtube.com/watch?v=0yqf5MxZ3oI
 # MobilemanUI
 
