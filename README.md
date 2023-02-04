@@ -1,11 +1,5 @@
 # MobileMan, Robotics for Construction 4.0 Project WP3, Nanyang Technological University, RRC Sponsored by BCA, NRP. Directed by Prof I-Ming Chen.
-### Video of the robot teleoperation system developed in NTU, Robotic Research Centre.
-### Initial campus test
-### Test Route: From RRC Lab to NTU Medical Centre (500 meters away)
-### Time: 1 Hour
-### Purpose: Functionality Test & Stability Test & latency test
-### Average overall latency: 200ms
-### Test video: https://www.youtube.com/watch?v=0yqf5MxZ3oI
+##### Test video: https://www.youtube.com/watch?v=0yqf5MxZ3oI
 # MobilemanUI
 
 ~~~bash
