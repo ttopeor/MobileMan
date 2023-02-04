@@ -56,8 +56,8 @@ cd MobilemanUI/ui && npm start
 
 # Amazon EC2
 ~~~bash
-sudo ssh -i /Users/yuefeng/myec2server.pem ubuntu@ec2-54-254-23-229.ap-southeast-1.compute.amazonaws.com
+sudo ssh -i /Users/yuefeng/"yourkey".pem "yourInstanceName".compute.amazonaws.com
 ~~~
 ~~~bash
-nohup ./rtsp-simple-server &  
+nohup ./rtsp-simple-server  
 ~~~
