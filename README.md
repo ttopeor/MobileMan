@@ -1,20 +1,28 @@
+# MobileMan, Robotics for Construction 4.0 Project WP3, Nanyang Technological University, RRC Sponsored by BCA, NRP. Directed by Prof I-Ming Chen.
+### Video of the robot teleoperation system developed in NTU, Robotic Research Centre.
+### Initial campus test
+### Test Route: From RRC Lab to NTU Medical Centre (500 meters away)
+### Time: 1 Hour
+### Purpose: Functionality Test & Stability Test & latency test
+### Average overall latency: 200ms
+### Test video: https://www.youtube.com/watch?v=0yqf5MxZ3oI
 # MobilemanUI
 
 ~~~bash
 ffplay -i "rtsp://192.168.10.108:8554/live" -fflags nobuffer -flags low_delay -framedrop
 ~~~
 
-## 寻找可用摄像头
+## Find cameras
 ~~~bash
 ffmpeg -list_devices true -f dshow -i dummy
 ~~~
 
-## 启动服务器
+## Server start
 ~~~bash
 Server
 cd MobilemanUI && ./rtsp-simple-server
 ~~~
-## Rotbot推送视频数据
+## Rotbot live streaming push
 ~~~bash
 ffmpeg -f v4l2 -video_size 640x480 -framerate 25 -i /dev/video0 -vcodec libx264 -tune zerolatency -preset ultrafast -f rtsp rtsp://192.168.10.40:8554/live 
 ~~~
@@ -53,7 +61,7 @@ cd MobilemanUI/ui && npm start
 
 # Amazon EC2
 ~~~bash
-sudo ssh -i /Users/yuefeng/Downloads/myec2server.pem ubuntu@ec2-54-254-23-229.ap-southeast-1.compute.amazonaws.com
+sudo ssh -i /Users/yuefeng/myec2server.pem ubuntu@ec2-54-254-23-229.ap-southeast-1.compute.amazonaws.com
 ~~~
 ~~~bash
 nohup ./rtsp-simple-server &  
