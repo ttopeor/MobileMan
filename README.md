@@ -1,8 +1,15 @@
 # MobileMan, Robotics for Construction 4.0 Project WP3, Nanyang Technological University, RRC 
 # Sponsored by BCA, NRP. 
 #### Test video: https://www.youtube.com/watch?v=0yqf5MxZ3oI
-# MobilemanUI
 
+# MobilemanUI
+# Network set up
+![alt text](https://github.com/ttopeor/MobileMan/blob/main/UI_Auto.png)
+
+# 4G Test data
+![alt text](https://github.com/ttopeor/MobileMan/blob/main/UI_Auto.png)
+
+# some useful commands
 ~~~bash
 ffplay -i "rtsp://192.168.10.108:8554/live" -fflags nobuffer -flags low_delay -framedrop
 ~~~
@@ -54,10 +61,18 @@ UI
 cd MobilemanUI/ui && npm start 
 ~~~
 
-# Amazon EC2
+## Amazon EC2
 ~~~bash
 sudo ssh -i /Users/yuefeng/"yourkey".pem "yourInstanceName".compute.amazonaws.com
 ~~~
 ~~~bash
 nohup ./rtsp-simple-server  
 ~~~
+
+# UI Design
+### Main page
+![alt text](https://github.com/ttopeor/MobileMan/blob/main/UI_main.png)
+### Manual mode page
+![alt text](https://github.com/ttopeor/MobileMan/blob/main/UI_manual.png)
+### Auto mode page
+![alt text](https://github.com/ttopeor/MobileMan/blob/main/UI_Auto.png)
