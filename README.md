@@ -4,7 +4,7 @@
 
 # MobilemanUI
 # Network set up
-![alt text](https://github.com/ttopeor/MobileMan/blob/main/UI_Auto.png)
+![alt text](https://github.com/ttopeor/MobileMan/blob/main/Network_Setting.png)
 
 # 4G Test data
 ![alt text](https://github.com/ttopeor/MobileMan/blob/main/UI_Auto.png)
